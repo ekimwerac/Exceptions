@@ -12,14 +12,6 @@ public class CustomException : Exception
         Timestamp = timestamp;
         AdditionalInfo = additionalInfo;
     }
-
-    public CustomException(string message, Exception innerException, DateTime timestamp, string additionalInfo)
-        : base(message, innerException)
-    {
-        Timestamp = timestamp;
-        AdditionalInfo = additionalInfo;
-    }
-
     // You can add more constructors and properties as needed.
 }
 

@@ -1,4 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
+// In this example, we create an InvalidOperationException and assign it as the inner exception to the CustomException.
+// The innerException argument is used to establish a connection between the custom exception and the exception that caused it.
+// When you catch the CustomException, you can access the inner exception using the InnerException property.
+
+// Including inner exceptions can be very useful in debugging and diagnosing issues because it allows you to see the entire
+// chain of exceptions that led to the current error.
+// You can traverse the exception chain by following the InnerException property until you reach the root cause of the problem.
+
 using System;
 
 public class CustomException : Exception

@@ -29,7 +29,9 @@ class Program
     {
         try
         {
-            throw new CustomException("Custom exception occurred", DateTime.Now, "Some additional information");
+            // Simulate an inner exception
+            var innerException = new InvalidOperationException("Inner exception occurred");
+            throw new CustomException("Custom exception occurred", innerException, DateTime.Now, "Some additional information");
         }
         catch (CustomException ex)
         {
@@ -37,6 +39,13 @@ class Program
             Console.WriteLine($"Message: {ex.Message}");
             Console.WriteLine($"Timestamp: {ex.Timestamp}");
             Console.WriteLine($"Additional Info: {ex.AdditionalInfo}");
+
+            if (ex.InnerException != null)
+            {
+                Console.WriteLine("Inner Exception Details:");
+                Console.WriteLine($"Message: {ex.InnerException.Message}");
+                // You can access additional properties of the inner exception here.
+            }
         }
     }
 }

@@ -1,4 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
+// In C#, you can create a custom exception by defining a new class that inherits
+// from the Exception class or one of its derived classes, such as System.Exception.
+// To provide rich details in your custom exception, you can add additional properties
+// or fields to the class and override the base exception constructors.
+
+// In the example below, we've created a custom exception class named CustomException.
+// It has two additional properties, Timestamp and AdditionalInfo, which enrich the exception with custom details.
+// We've defined one constructors to initialize these properties.
+// The Main method demonstrates how to throw and catch the custom exception, allowing you to access its details.
+
+// You can further extend and customize your custom exception class to include any relevant information you need to convey when exceptions are raised in your application.
+
+// Here's the example:
+
 using System;
 
 public class CustomException : Exception
